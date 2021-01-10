@@ -23,7 +23,7 @@ public class Review {
 
     @ManyToOne
     @JoinColumn(name = "book_id")
-    private Book book;
+    private Frame_profile_warehouse_balance frameprofilewarehousebalance;
 
     public Long getId() {
         return id;
@@ -41,11 +41,11 @@ public class Review {
         this.review = review;
     }
 
-    public Book getBook() {
-        return book;
+    public Frame_profile_warehouse_balance getBook() {
+        return frameprofilewarehousebalance;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public void setBook(Frame_profile_warehouse_balance frameprofilewarehousebalance) {
+        this.frameprofilewarehousebalance = frameprofilewarehousebalance;
     }
 }

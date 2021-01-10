@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 
 <?import javafx.scene.control.Button?>
-<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="framing.controllers.books.BookAddController">
+<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="framing.controllers.frame_profile_warehouse_balances.BookAddController">
    <children>
       <AnchorPane id="AnchorPane" fx:id="mainContainer" prefHeight="338.0" prefWidth="464.0" styleClass="custom-pane">
          <children>

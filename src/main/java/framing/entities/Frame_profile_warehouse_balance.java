@@ -10,8 +10,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "book")
-public class Book {
+@Table(name = "frame_profile_warehouse_balance")
+public class Frame_profile_warehouse_balance {
 
     @Id
     @Column(name = "id")
@@ -19,22 +19,22 @@ public class Book {
     private Long id;
 
     @Column
-    private String title;
+    private String frame_id;
 
     @Column
     private String description;
 
     @ManyToOne
     @JoinColumn(name = "author_id")
-    private Author author;
+    private Frame_profile frameprofile;
 
-    public Book() {
+    public Frame_profile_warehouse_balance() {
     }
 
-    public Book(String title, String description, Author author) {
-        this.title = title;
+    public Frame_profile_warehouse_balance(String frame_id, String description, Frame_profile frameprofile) {
+        this.frame_id = frame_id;
         this.description = description;
-        this.author = author;
+        this.frameprofile = frameprofile;
     }
 
     public Long getId() {
@@ -45,12 +45,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getframe_id() {
+        return frame_id;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setframe_id(String frame_id) {
+        this.frame_id = frame_id;
     }
 
     public String getDescription() {
@@ -61,11 +61,11 @@ public class Book {
         this.description = description;
     }
 
-    public Author getAuthor() {
-        return author;
+    public Frame_profile getAuthor() {
+        return frameprofile;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthor(Frame_profile frameprofile) {
+        this.frameprofile = frameprofile;
     }
 }

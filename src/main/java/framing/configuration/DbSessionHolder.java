@@ -1,7 +1,7 @@
 package framing.configuration;
 
-import framing.entities.Author;
-import framing.entities.Book;
+import framing.entities.Frame_profile;
+import framing.entities.Frame_profile_warehouse_balance;
 import framing.entities.Review;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -16,12 +16,12 @@ import static java.util.Arrays.asList;
 
 public class DbSessionHolder {
 
-    private static final List<Class> ENTITIES = asList(Author.class, Book.class, Review.class);
+    private static final List<Class> ENTITIES = asList(Frame_profile.class, Frame_profile_warehouse_balance.class, Review.class);
 
     private static final String DB_USERNAME = "root";
     private static final String DB_PASSWORD = "sunsaprakts";
 
-    private static final String DB_NAME = "framing";
+    private static final String DB_NAME = "rametava_warehouse";
     private static final String DB_URL = "jdbc:mysql://localhost:3306/" + DB_NAME + "?useSSL=false&serverTimezone=UTC";
     private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
 
