@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.TextField?>
-
-<?import javafx.scene.control.Button?>
-<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="framing.controllers.frame_profile_warehouse_balances.BookAddController">
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="framing.controllers.frame_profile_warehouse_balances.Frame_profile_warehouse_balanceAddController">
    <children>
       <AnchorPane id="AnchorPane" fx:id="mainContainer" prefHeight="338.0" prefWidth="464.0" styleClass="custom-pane">
          <children>
@@ -31,7 +26,7 @@
                   </TextField>
                   <HBox alignment="CENTER" prefHeight="47.0" prefWidth="404.0" spacing="30.0">
                      <children>
-                        <Button fx:id="saveButton" onAction="#addBook" prefHeight="66.0" prefWidth="100.0" text="Save" />
+                        <Button fx:id="saveButton" onAction="#addFrame_profile_warehouse_balance" prefHeight="66.0" prefWidth="100.0" text="Save" />
                         <Button fx:id="cancelButton" layoutX="10.0" layoutY="10.0" onAction="#cancel" prefHeight="66.0" prefWidth="100.0" text="Cancel" />
                      </children>
                      <VBox.margin>

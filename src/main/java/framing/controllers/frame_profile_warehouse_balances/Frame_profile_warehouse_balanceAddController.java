@@ -1,8 +1,9 @@
 package framing.controllers.frame_profile_warehouse_balances;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
+import framing.entities.Frame_profile;
+import framing.entities.Frame_profile_warehouse_balance;
+import framing.repository.Frame_profileRepository;
+import framing.repository.Frame_profile_warehouse_balanceRepository;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,10 +11,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import framing.entities.Frame_profile;
-import framing.repository.Frame_profileRepository;
-import framing.entities.Frame_profile_warehouse_balance;
-import framing.repository.Frame_profile_warehouse_balanceRepository;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class Frame_profile_warehouse_balanceAddController implements Initializable {
 
@@ -54,6 +54,7 @@ public class Frame_profile_warehouse_balanceAddController implements Initializab
         String Frame_profile_warehouse_balanceAuthorId = authorId.getText();
 
         if (Frame_profile_warehouse_balanceframe_id.isEmpty() || Frame_profile_warehouse_balanceDescription.isEmpty() || Frame_profile_warehouse_balanceAuthorId.isEmpty()) {
+            System.out.println("Aizpildiet visus laukus!");
             //TODO: show user alert that all fields have to be filled
             return;
         }
@@ -61,6 +62,7 @@ public class Frame_profile_warehouse_balanceAddController implements Initializab
         Long authorId = Long.parseLong(Frame_profile_warehouse_balanceAuthorId);
         Frame_profile frameprofile = frameprofileRepository.findOne(authorId);
         if (frameprofile == null) {
+            System.out.println("Šāds produkts neeksistē");
             //TODO: author with such ID doesn't exist, display error to user!
             return;
         }

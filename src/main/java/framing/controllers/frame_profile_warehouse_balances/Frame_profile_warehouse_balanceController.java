@@ -1,8 +1,8 @@
 package framing.controllers.frame_profile_warehouse_balances;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
+import framing.controllers.view.ViewLoader;
+import framing.entities.Frame_profile_warehouse_balance;
+import framing.repository.Frame_profile_warehouse_balanceRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,9 +11,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import framing.entities.Frame_profile_warehouse_balance;
-import framing.repository.Frame_profile_warehouse_balanceRepository;
-import framing.controllers.view.ViewLoader;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class Frame_profile_warehouse_balanceController implements Initializable {
 
@@ -38,6 +38,14 @@ public class Frame_profile_warehouse_balanceController implements Initializable 
                 .getResource("/ui/Frame_profile_warehouse_balance/add_Frame_profile_warehouse_balance.fxml"), "Edit Frame_profile_warehouse_balance");
         controller.setEditable(frameprofilewarehousebalance);
         controller.addPostOperationCallback(this::populateTable);
+    }
+    @FXML
+    private void deleteFrame_profile_warehouse_balance(ActionEvent event) {
+        Frame_profile_warehouse_balance frameprofilewarehousebalance = table.getSelectionModel().getSelectedItem();
+        if (frameprofilewarehousebalance == null) {
+            return;
+        }
+        frameprofilewarehousebalanceRepository.delete(frameprofilewarehousebalance);
     }
 
     @Override
