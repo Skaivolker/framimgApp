@@ -21,7 +21,7 @@ public class MainController implements Initializable {
 
     @FXML
     public void switchPanel(ActionEvent event) throws Exception {
-        Pane pane = FXMLLoader.load(getClass().getResource("/ui/book/list_books.fxml"));
+        Pane pane = FXMLLoader.load(getClass().getResource("/ui/Frame/list_books.fxml"));
         content.setCenter(pane);
     }
 }

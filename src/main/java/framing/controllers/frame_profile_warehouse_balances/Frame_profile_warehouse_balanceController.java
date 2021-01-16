@@ -47,22 +47,19 @@ public class Frame_profile_warehouse_balanceController implements Initializable 
     }
 
     private void configureTable() {
-        TableColumn<Frame_profile_warehouse_balance, Long> column1 = new TableColumn<>("Id");
-        column1.setCellValueFactory(new PropertyValueFactory<>("id"));
+        TableColumn<Frame_profile_warehouse_balance, Long> column1 = new TableColumn<>("frame_id");
+        column1.setCellValueFactory(new PropertyValueFactory<>("frame_id"));
 
-        TableColumn<Frame_profile_warehouse_balance, String> column2 = new TableColumn<>("Title");
-        column2.setCellValueFactory(new PropertyValueFactory<>("title"));
+        TableColumn<Frame_profile_warehouse_balance, String> column2 = new TableColumn<>("frame_bar_count");
+        column2.setCellValueFactory(new PropertyValueFactory<>("frame_bar_count"));
 
-        TableColumn<Frame_profile_warehouse_balance, String> column3 = new TableColumn<>("Description");
-        column3.setCellValueFactory(new PropertyValueFactory<>("description"));
+        TableColumn<Frame_profile_warehouse_balance, String> column3 = new TableColumn<>("frame_total_length");
+        column3.setCellValueFactory(new PropertyValueFactory<>("frame_total_length"));
 
-        TableColumn<Frame_profile_warehouse_balance, String> column4 = new TableColumn<>("Author");
-        column4.setCellValueFactory(new PropertyValueFactory<>("authorFullName"));
 
         table.getColumns().add(column1);
         table.getColumns().add(column2);
         table.getColumns().add(column3);
-        table.getColumns().add(column4);
     }
 
     private void populateTable() {
